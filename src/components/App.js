@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import PropTypes from 'prop-types';
 
-export default function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      This is a sample stateful and server-side
-      rendered React application.
-      <br />
-      <br />
-      Here is a button that will track
-      how many times you click it:
-      <br />
-      <br />
-      <button onClick={() => setCount(count + 1)}>{count}</button>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h3>Hello World!</h3>
+      </div>
+    );
+  }
 }
+
+export default App;

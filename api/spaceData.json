@@ -1,0 +1,48 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 3,
+  "skip": 0,
+  "limit": 100,
+  "items": [{
+    "fields": {
+      "title": "My First Space",
+      "description": "This space was created by Alanna Atlassian as an example of how to create a space and relate assets and entries to it."
+    },
+    "sys": {
+      "id": "yadj1kx9rmg0",
+      "type": "Space",
+      "createdAt": "2015-05-18T11:29:46.809Z",
+      "createdBy": "4FLrUHftHW3v2BLi9fzfjU",
+      "updatedAt": "2015-05-18T11:29:46.809Z",
+      "updatedBy":  "4FLrUHftHW3v2BLi9fzfjU"
+    }
+  }, {
+    "fields": {
+      "title": "My Second Space",
+      "description": ""
+    },
+    "sys": {
+      "id": "yadj1kx9rmg01",
+      "type": "Space",
+      "createdAt": "2015-05-18T11:29:46.809Z",
+      "createdBy": "4FLrUHftHW3v2BLi9fzfjU",
+      "updatedAt": "2015-05-18T11:29:46.809Z",
+      "updatedBy":  "4FLrUHftHW3v2BLi9fzfjU"
+    }
+  }, {
+    "fields": {
+      "title": "My Third Space",
+      "description": ""
+    },
+    "sys": {
+      "id": "yadj1kx9rmg02",
+      "type": "Space",
+      "createdAt": "2015-05-18T11:29:46.809Z",
+      "createdBy": "4FLrUHftHW3v2BLi9fzfjU",
+      "updatedAt": "2015-05-18T11:29:46.809Z",
+      "updatedBy":  "4FLrUHftHW3v2BLi9fzfjU"
+    }
+  }]
+}
