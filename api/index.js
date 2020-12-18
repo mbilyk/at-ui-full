@@ -1,9 +1,15 @@
 import express from 'express';
 import spaceData from './spaceData';
+import userData from './userData';
 
 const router = express.Router();
 const spaces = spaceData.items.reduce((obj, space) => {
   obj[space.sys.id] = space;
+  return obj;
+}, {});
+
+const users = userData.items.reduce((obj, user) => {
+  obj[user.sys.id] = user;
   return obj;
 }, {});
 
@@ -13,11 +19,16 @@ router.get('/space', (req, res) => {
   });
 });
 
-// router.get('/contests/:contestId', (req, res) => {
-//   let contest = contests[req.params.contestId];
-//   contest.description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+router.get('/space/:spaceId', (req, res) => {
+  let space = spaces[req.params.spaceId];
+  space['sys']['createdBy'] = users[space['sys']['createdBy']];
+  space['sys']['updatedBy'] = users[space['sys']['updatedBy']];
+  res.send(space);
+});
 
-//   res.send(contest);
-// });
+router.get('/user/:userId', (req, res) => {
+  let user = users[req.params.userId];
+  res.send(user);
+});
 
 export default router;

@@ -1,0 +1,27 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 1,
+  "skip": 0,
+  "limit": 100,
+  "items": [{
+    "fields": {
+      "name": "Alana Atlassian",
+      "role": "Author"
+    },
+    "sys": {
+      "id": "4FLrUHftHW3v2BLi9fzfjU",
+      "type": "User"
+    }
+  },{
+    "fields": {
+      "name": "John Doe",
+      "role": "Editor"
+    },
+    "sys": {
+      "id": "4FLrUHftHW3v2BLi9fzfjU2",
+      "type": "User"
+    }
+  }]
+}
