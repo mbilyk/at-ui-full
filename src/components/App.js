@@ -9,27 +9,42 @@ class App extends React.Component {
     super();
     this.state = {
       spaces: {},
+      entries: {},
+      activeIndex: 0
     };
+    this.handleSpaceChange = this.handleSpaceChange.bind(this);
   }
 
   componentDidMount() {
-    api.fetchSpaceList().then(resp => {
+    api.fetchSpaceList().then(stateResp => {
+      api.fetchEntries(Object.keys(stateResp)[this.state.activeIndex])
+        .then(entriesResp => this.setState({
+          entries: entriesResp,
+        }));
       this.setState({
-        spaces: resp
+        spaces: stateResp
       });
     });
-    // axios.get('api/space')
-    //   .then(resp => {
-    //     this.setState({
-    //       spaces: resp.data.spaces
-    //     });
-    //   });
+  }
+
+  handleSpaceChange(e, data) {
+    api.fetchEntries(Object.keys(this.state.spaces)[data.activeIndex])
+      .then(resp => this.setState({
+        entries: resp,
+        activeIndex: data.activeIndex
+      }));
+    //this.setState({activeIndex:data.activeIndex});
   }
 
   render() {
     return (
       <div>
-        <SpaceList spaces={this.state.spaces} />
+        <SpaceList 
+          spaces={this.state.spaces} 
+          activeIndex={this.state.activeIndex} 
+          handleSpaceChange={this.handleSpaceChange}
+          entries={this.state.entries} 
+        />
       </div>
     );
   }
