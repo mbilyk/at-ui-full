@@ -13,3 +13,8 @@ export const fetchEntries = spaceId => {
   return axios.get(`/api/space/${spaceId}/entries`)
     .then(resp => resp.data);
 };
+
+export const fetchAssets = spaceId => {
+  return axios.get(`/api/space/${spaceId}/assets`)
+    .then(resp => resp.data);
+};

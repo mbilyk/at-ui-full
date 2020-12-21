@@ -13,7 +13,12 @@ class SpaceList extends React.Component {
       // eslint-disable-next-line react/display-name
       paneObj['render'] = () => 
         <Tab.Pane as={Container} fluid>
-          <SpaceView {...this.props.spaces[spaceId]} activeIndex={this.props.activeIndex}/>
+          <SpaceView 
+            {...this.props.spaces[spaceId]} 
+            activeIndex={this.props.activeIndex} 
+            entries={this.props.entries}
+            assets={this.props.assets}
+          />
         </Tab.Pane>;
       return paneObj;
     });
@@ -42,7 +47,8 @@ SpaceList.propTypes = {
   spaces: PropTypes.object.isRequired,
   handleSpaceChange: PropTypes.func.isRequired,
   activeIndex: PropTypes.number.isRequired,
-  entries: PropTypes.object.isRequired
+  entries: PropTypes.object.isRequired,
+  assets: PropTypes.object.isRequired
 };
 
 export default SpaceList;

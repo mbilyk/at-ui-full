@@ -10,19 +10,28 @@ class App extends React.Component {
     this.state = {
       spaces: {},
       entries: {},
+      assets: {},
       activeIndex: 0
     };
     this.handleSpaceChange = this.handleSpaceChange.bind(this);
   }
 
   componentDidMount() {
-    api.fetchSpaceList().then(stateResp => {
-      api.fetchEntries(Object.keys(stateResp)[this.state.activeIndex])
-        .then(entriesResp => this.setState({
-          entries: entriesResp,
-        }));
+    api.fetchSpaceList().then(spaceResp => {
+      api.fetchAssets(Object.keys(spaceResp)[this.state.activeIndex])
+        .then(assetsResp => {
+          this.setState({
+            assets: assetsResp,
+          });
+        });
+      api.fetchEntries(Object.keys(spaceResp)[this.state.activeIndex])
+        .then(entriesResp => {
+          this.setState({
+            entries: entriesResp,
+          });
+        });
       this.setState({
-        spaces: stateResp
+        spaces: spaceResp
       });
     });
   }
@@ -43,7 +52,8 @@ class App extends React.Component {
           spaces={this.state.spaces} 
           activeIndex={this.state.activeIndex} 
           handleSpaceChange={this.handleSpaceChange}
-          entries={this.state.entries} 
+          entries={this.state.entries}
+          assets={this.state.assets} 
         />
       </div>
     );

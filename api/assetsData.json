@@ -1,0 +1,60 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 3,
+  "skip": 0,
+  "limit": 100,
+  "items": [{
+        "fields": {
+          "title": "Hero Collaboration Partial",
+          "contentType": "image/png",
+          "fileName": "hero-collaboration-partial.png",
+          "upload": "https://wac-cdn.atlassian.com/dam/jcr:51be4df5-1ffb-4a4d-9f44-0b84dad9de5e/hero-collaboration-partial.png"
+        },
+        "sys": {
+          "id": "wtrHxeu3zEoEce2MokCSi1",
+          "type": "Asset",
+          "version": 1,
+          "space": "yadj1kx9rmg0",
+          "createdAt": "2015-05-18T11:29:46.809Z",
+          "createdBy": "4FLrUHftHW3v2BLi9fzfjU",
+          "updatedAt": "2015-05-18T11:29:46.809Z",
+          "updatedBy": "4FLrUHftHW3v2BLi9fzfjU"
+        }
+      },{
+        "fields": {
+          "title": "Stride Chat",
+          "contentType": "image/png",
+          "fileName": "stride_chat.svg",
+          "upload": "https://wac-cdn.atlassian.com/dam/jcr:61741d76-b9a0-44b1-a31f-bfde8e6930ab/stride_chat.svg"
+        },
+        "sys": {
+          "id": "wtrHxeu3zEoEce2MokCSi2",
+          "type": "Asset",
+          "version": 1,
+          "space": "yadj1kx9rmg0",
+          "createdAt": "2015-05-18T11:29:46.809Z",
+          "createdBy": "4FLrUHftHW3v2BLi9fzfjU",
+          "updatedAt": "2015-05-18T11:29:46.809Z",
+          "updatedBy": "4FLrUHftHW3v2BLi9fzfjU2"
+        }
+      },{
+        "fields": {
+          "title": "Get Started",
+          "contentType": "image/png",
+          "fileName": "getstarted-collab.png",
+          "upload": "https://wac-cdn.atlassian.com/dam/jcr:c7bdc391-e84f-43fe-9e8b-194d8a3b9aaf/getstarted-collab.png"
+        },
+        "sys": {
+          "id": "wtrHxeu3zEoEce2MokCSi3",
+          "type": "Asset",
+          "version": 1,
+          "space": "yadj1kx9rmg0",
+          "createdAt": "2015-05-18T11:29:46.809Z",
+          "createdBy": "4FLrUHftHW3v2BLi9fzfjU2",
+          "updatedAt": "2015-05-18T11:29:46.809Z",
+          "updatedBy": "4FLrUHftHW3v2BLi9fzfjU2"
+        }
+      }]
+}
