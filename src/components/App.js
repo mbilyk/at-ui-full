@@ -39,10 +39,12 @@ class App extends React.Component {
   handleSpaceChange(e, data) {
     api.fetchEntries(Object.keys(this.state.spaces)[data.activeIndex])
       .then(resp => this.setState({
-        entries: resp,
-        activeIndex: data.activeIndex
+        entries: resp
       }));
-    //this.setState({activeIndex:data.activeIndex});
+    api.fetchAssets(Object.keys(this.state.spaces)[data.activeIndex])
+      .then(resp => this.setState({
+        assets: resp
+      }));
   }
 
   render() {
