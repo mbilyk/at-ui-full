@@ -11,7 +11,7 @@ export const fetchSpaceList = () => {
 
 export const fetchEntries = spaceId => {
   return axios.get(`/api/space/${spaceId}/entries`)
-    .then(resp => resp.data);
+    .then(resp => resp.data.entries);
 };
 
 export const fetchAssets = spaceId => {

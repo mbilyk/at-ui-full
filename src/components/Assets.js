@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Table } from 'semantic-ui-react';
 
 function sortTableData(assets) {
-  return Object.keys(assets).map(assetId => { 
+  return Object.keys(assets).map(assetId => {
     return {
       assetId: assetId,
       title: assets[assetId].fields.title,

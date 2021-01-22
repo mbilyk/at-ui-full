@@ -25,9 +25,9 @@ class App extends React.Component {
           });
         });
       api.fetchEntries(Object.keys(spaceResp)[this.state.activeIndex])
-        .then(entriesResp => {
+        .then(entries => {
           this.setState({
-            entries: entriesResp,
+            entries
           });
         });
       this.setState({
